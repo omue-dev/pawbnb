@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Post your hotel here</h1>
+
+    <%= simple_form_for @hotel do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description%>
+        <%= f.input :address%>
+        <%= f.input :price_per_night%>
+        <%= f.button :submit %>
+    <% end %>
+</div>
