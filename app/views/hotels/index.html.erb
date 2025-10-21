@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>All Hotels</h1>
+    <ul>
+        <%= @hotels.each do |hotel| %>
+            <li><%= hotel.name %></li>
+        <% end %>
+    </ul>
+</div>
