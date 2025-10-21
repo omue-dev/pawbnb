@@ -22,6 +22,7 @@ puts "✨ Creating users..."
   User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
+    password: "123456",
     email: Faker::Internet.unique.email,
     address: Faker::Address.city,
     role: "host"
@@ -32,6 +33,7 @@ end
 guest = User.create!(
   first_name: "Guesty",
   last_name: "McGuestface",
+  password: "123456",
   email: "guest@example.com",
   address: "Berlin, Germany",
   role: "guest"
