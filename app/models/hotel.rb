@@ -2,7 +2,7 @@ class Hotel < ApplicationRecord
   # Associations
   belongs_to :user # host
   has_many :bookings, dependent: :destroy
-  has_one_attached :photo
+  has_many_attached :photos
 
   # Validations
   validates :name, :description, :address, :price_per_night, presence: true
