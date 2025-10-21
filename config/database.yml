@@ -79,6 +79,4 @@ test:
 #
 production:
   <<: *default
-  database: pawbnb_production
-  username: pawbnb
-  password: <%= ENV["PAWBNB_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
