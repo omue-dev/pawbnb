@@ -1,12 +1,33 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
-  background: white;
+  padding: 0.5rem 1rem;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.logo {
+  cursor:pointer
+}
+.logo:hover {
+  opacity: 0.8;
+}
+
+.pawbnb-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  font-family: $body-font
+}
+
+.pawbnb-logo-light {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #333333;
+  font-family: $body-font
+}
+
+.paw {
+  font-size:1.2rem;
 }
