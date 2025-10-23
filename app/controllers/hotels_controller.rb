@@ -1,6 +1,10 @@
 class HotelsController < ApplicationController
   def index
-    @hotels = Hotel.all
+    if params[:query].present?
+      @hotels = Hotel.where("address ILIKE ?", "%#{params[:query]}%")
+    else
+      @hotels = Hotel.all
+    end
   end
 
   def new 
