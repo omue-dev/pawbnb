@@ -3,6 +3,7 @@
   <head>
     <title>Pawbnb</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="<%= asset_path 'favicon.png' %>" type="image/x-icon">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,9 +11,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+  <body class="d-flex flex-column min-vh-100">
+  <%= render "shared/navbar" %>
+
+  <main class="flex-grow-1">
+      <%= yield %>
+  </main>
+
+  <%= render "shared/footer" %>
+</body>
+
 </html>
