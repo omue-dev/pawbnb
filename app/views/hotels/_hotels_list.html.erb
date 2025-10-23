@@ -1,8 +1,10 @@
 <div id="hotels-list">
     <% hotels.each do |hotel| %>
-        <div class="card mb-3 p-3 shadow-sm">
-            <h4><%= hotel.name %></h4>
-            <p><%= hotel.address %></p>
-        </div>
+      <%= link_to hotel_path(hotel), class: "text-decoration-none text-dark" do %>
+          <div class="card mb-3 p-3 shadow-sm">
+              <h4><%= hotel.name %></h4>
+              <p><%= hotel.address %></p>
+          </div>
+      <% end %>
     <% end %>
 </div>

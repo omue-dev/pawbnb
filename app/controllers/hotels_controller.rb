@@ -7,11 +7,15 @@ class HotelsController < ApplicationController
     end
   end
 
-  def new 
+  def show
+    @hotel = Hotel.find(params[:id])
+  end
+
+  def new
     @hotel = Hotel.new
   end
 
-  def create 
+  def create
     @hotel = Hotel.new()
     @hotel.save
   end
