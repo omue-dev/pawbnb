@@ -1,10 +1,30 @@
-<div id="hotels-list">
+<div class="hotel-grid container">
+  <div class="row g-4">
     <% hotels.each do |hotel| %>
-      <%= link_to hotel_path(hotel), class: "text-decoration-none text-dark" do %>
-          <div class="card mb-3 p-3 shadow-sm">
-              <h4><%= hotel.name %></h4>
-              <p><%= hotel.address %></p>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <%= link_to hotel_path(hotel), class: "text-decoration-none text-dark" do %>
+          <div class="card hotel-card h-100 border-1 border-dark shadow-sm">
+            <div class="hotel-image">
+              <% if hotel.photos.attached? %>
+                <%= cl_image_tag hotel.photos.first.key,
+                      height: 180,
+                      width: 300,
+                      crop: :fill,
+                      gravity: :center,
+                      loading: "lazy",
+                      class: "img-fluid rounded-top" %>
+              <% else %>
+                <span class="text-muted">Hotel Image</span>
+              <% end %>
+            </div>
+            <div class="card-body">
+              <h5 class="fw-bold mb-1"><%= hotel.name %></h5>
+              <p class="text-muted small mb-1"><%= hotel.address %></p>
+              <p class="fw-semibold mb-0"><%= hotel.formatted_price %> / night</p>
+            </div>
           </div>
-      <% end %>
+        <% end %>
+      </div>
     <% end %>
+  </div>
 </div>

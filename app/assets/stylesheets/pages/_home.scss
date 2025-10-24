@@ -1,1 +1,14 @@
-// Specific CSS for your home-page
+.hero-section-home {
+  background-image: image-url("kaya-lenny-beach-spring.webp");
+  background-size: cover;
+  background-position: center 36%;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section-home .container {
+  z-index: 2;
+  position: relative;
+}
