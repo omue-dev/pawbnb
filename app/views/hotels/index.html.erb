@@ -1,5 +1,21 @@
-<h1>Find your hotel</h1>
+  <!-- Hero section -->
+  <section class="hero-section-home position-relative text-white  shadow-sm">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <!-- Left: Welcome text -->
+        <div class="col-lg-6 col-md-8 mx-auto mx-lg-0 text-start text-lg-start">
+          <h1 class="fw-bold mt-4 text-dark">Find the perfect dog hotel</h1>
+          <p class="fs-5 text-dark">
+            Book unique dog hotels and <br>experiences for your furry friend.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div id="hotels-list-container">
-    <%= render "hotels_list", hotels: @hotels %>
-</div>
+
+  <section class="hotels-list py-5 my-4">
+    <div id="hotels-list-container">
+        <%= render "hotels_list", hotels: @hotels %>
+    </div>
+  </section>
